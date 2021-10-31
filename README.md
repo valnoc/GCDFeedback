@@ -2,3 +2,9 @@
 A GCD-based implementation of [RxFeedback](https://github.com/NoTests/RxFeedback.swift). Unidirectional Data Flow Architecture.
 
 [Demo Project](https://github.com/valnoc/Demo_GCDFeedback)
+
+## Usage
+Add this library as a spm dependency.
+
+## License
+GCDFeedback is available under MIT License.
