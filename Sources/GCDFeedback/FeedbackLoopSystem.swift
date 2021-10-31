@@ -1,8 +1,8 @@
 import Foundation
 
 // MARK: - FeedbackLoopSystem
-class FeedbackLoopSystem<TState: Equatable, TEvent> {
-    typealias Feedback = (_ newState: TState, _ oldState: TState, _ action: @escaping (TEvent) -> Void) -> Void
+public class FeedbackLoopSystem<TState: Equatable, TEvent> {
+    public typealias Feedback = (_ newState: TState, _ oldState: TState, _ action: @escaping (TEvent) -> Void) -> Void
     
     private var queue = DispatchQueue(label: "FeedbackLoopSystem_queue")
     
@@ -18,7 +18,7 @@ class FeedbackLoopSystem<TState: Equatable, TEvent> {
         self.feedbacks = feedbacks
     }
 
-    func acceptEvent(_ event: TEvent) {
+    public func acceptEvent(_ event: TEvent) {
         queue.async { [weak self] in
             guard let __self = self else { return }
             

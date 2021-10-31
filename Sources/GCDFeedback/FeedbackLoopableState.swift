@@ -1,5 +1,5 @@
 import Foundation
 
-protocol FeedbackLoopableState: Equatable {
+public protocol FeedbackLoopableState: Equatable {
     static func initial() -> Self
 }

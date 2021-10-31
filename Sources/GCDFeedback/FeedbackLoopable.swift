@@ -1,6 +1,6 @@
 import Foundation
 
-protocol FeedbackLoopable: AnyObject {
+public protocol FeedbackLoopable: AnyObject {
     associatedtype TState: FeedbackLoopableState
     associatedtype TEvent
     
@@ -11,7 +11,7 @@ protocol FeedbackLoopable: AnyObject {
 }
 
 extension FeedbackLoopable {
-    func driveFeedbackLoopSystem() {
+    public func driveFeedbackLoopSystem() {
         feedbackLoopSystem = .init(initialState: TState.initial(),
                                    reducer: Self.reduce,
                                    feedbacks: feedbacks())
